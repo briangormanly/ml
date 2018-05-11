@@ -53,5 +53,6 @@ who posted [this Tex Stack Excange question and answer](https://tex.stackexchang
 Although I modified it substantially, the general idea is laregely not my
 own.
 
-Professor. Joe Kirtland also sent me a copy of his own LaTeX letterhead and I
+Professor [Joe Kirtland](http://foxweb.marist.edu/users/joe.kirtland/) also 
+sent me a copy of his own LaTeX letterhead and I
 used that for inspiration. Thanks Joe! I owe you a :coffee:.
