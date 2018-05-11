@@ -1,0 +1,141 @@
+% Most of the following code comes from this SE answer
+% https://tex.stackexchange.com/a/59933/81126
+%
+% Significantly changed by Pablo Rivas in 2018
+%
+% This is to provide a LaTeX-based template for a letter that follows Marist's
+% official publishing guidlines.
+% > If you like this, buy me a Dr. Pepper or Cofe (black, medium or dark roast)
+%
+% MaristLetterDefs.tex
+% This file contains all the definitions necessary to put things in the right
+% place and in the right size
+
+
+%%%%%% THIS IS THE PART THAT YOU WILL NEED TO EDIT WITH YOUR OWN INFO %%%%%%
+
+% Your faculty info goes here. This should not change often, I suppose.
+% You are always you
+\providecommand\Maristfromname{Pablo Picasso}
+\providecommand\Maristfromtitle{Prof of CS}
+\providecommand\Maristfromdegree{Ph.D.}
+\providecommand\Maristfromdept{Dept of CS}
+\providecommand\Maristschooltel{(845) 575-3000 ext. 1234}
+\providecommand\Maristfromemail{\url{Pablo.Picasso@Marist.edu}}
+\providecommand\Maristfromweb{\url{https://www.picasso.com}}
+\providecommand\Maristfromschool{School of Computer Science and Mathematics}
+\providecommand\Maristschooltel{(845) 575-3000}
+\providecommand\Maristschoolfax{(845) 575-3201}
+\providecommand\Maristfromaddress{Marist College \ \ Poughkeepsie, NY 12601-1387}
+
+% Update this to the correct path of your signature (signature is eps)
+\providecommand\Maristsignaturefile{PabloSignature}
+
+% Marist's logo path and file name defined here (logo is eps)
+\providecommand\Maristlogofile{MaristLogo}
+% -----------------------------------------------------------------------------
+
+% You are welcome to edit after this, but it is more challenging. The following
+% are all the packages and definitions to make things show in the right place at
+% the right time. I provided comments where I knew what I was doing. Still, you 
+% are on your own.
+
+
+% Define Marist official colors
+\usepackage[dvinames]{xcolor}
+\definecolor{MaristRed}{RGB}{207,20,43} 
+\definecolor{MaristGray}{RGB}{38,38,38}
+
+% Measurements are taken directly from Marist's guide
+\usepackage[top=1.5in,left=1.5in,bottom=1.0in,right=1.25in]{geometry}
+\usepackage{graphicx}
+\usepackage[colorlinks=false,
+            pdfborder={0 0 0},
+            ]{hyperref}
+\usepackage[absolute]{textpos}
+\usepackage{ifthen}
+\usepackage{soul}
+
+
+% For placement of the horizontal line
+\usepackage{tikz}
+\usetikzlibrary{calc}
+
+% A 'close enough' font, but no the prescribed BauerBodoni
+\usepackage{gfsbodoni}
+%\usepackage[sc,osf]{mathpazo}
+\linespread{1.05}
+
+% Pagkage for indenting signature section
+\usepackage{scrextend}
+
+% Remove paragraph indentation
+\parindent0pt
+\setlength{\parskip}{0.8\baselineskip}
+\raggedright
+\pagestyle{empty}
+% Ensure consistency in the footer
+\urlstyle{same}
+
+% Packages for consistent headers and footers
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% This is the footer information
+\renewcommand{\footrulewidth}{0pt}
+\fancyfoot{}
+\fancyfoot[C]{%
+    {\footnotesize\color{MaristGray}\sffamily
+    \Maristfromschool \ \ \ \Maristfromaddress \\[-0.1\baselineskip]
+    Telephone:\Maristschooltel \ \ \ Fax:\Maristschoolfax}\color{black}
+}
+
+\fancyhead{}
+\fancyhead[L]{
+    % -------------------------------------------------------
+    % Add logo (this is tricky due to indentation? and space)
+    \begin{textblock*}{6.375in}[0.15,0.1](4.25in,0.65in)
+        \includegraphics[width=1.8in]{\Maristlogofile}
+    \end{textblock*}
+}
+\renewcommand{\headrulewidth}{0pt}
+
+
+\AtBeginDocument{
+    % Measurements are taken directly from the guide
+    \newgeometry{top=1.5in,left=1.5in,bottom=1.0in,right=1.25in}
+    % Date is indented
+    \hspace{7.25cm} \Maristdate
+    \bigskip
+
+    % Here we place the destinatary data
+    \Maristtoname\ifthenelse{\equal{\Maristtoname}{}}{}{\\}
+    \Maristtoaddress
+    \bigskip
+
+    \Maristsubject\par
+    \Maristopening\par
+}
+
+% This whole thing goes indented according to the guidelines
+\AtEndDocument{
+    \par\vspace{2ex}
+    % Idea for signature indent taken from here: 
+    % https://tex.stackexchange.com/a/37084/81126
+    \begin{addmargin}[7.25cm]{0em}
+      \Maristclosing
+      % Signature goes here
+
+      \ifthenelse{\equal{\Maristsignaturefile}{}}{\bigskip\bigskip}{\includegraphics[width=1.2in]{\Maristsignaturefile}\\[-0.2\baselineskip]}
+      
+      % Sender data is structured here
+      \Maristfromname, \Maristfromdegree \\
+      \Maristfromtitle\ifthenelse{\equal{\Maristfromtitle}{}}{}{\\}
+      \Maristfromdept\ifthenelse{\equal{\Maristfromdept}{}}{}{\\} 
+      \Maristschooltel\ifthenelse{\equal{\Maristschooltel}{}}{}{\\} 
+      \Maristfromemail\ifthenelse{\equal{\Maristfromemail}{}}{}{\\} 
+      \Maristfromweb\ifthenelse{\equal{\Maristfromweb}{}}{}{\\} 
+
+      \ifthenelse{\equal{\Maristenclosure}{}}{}{\bigskip\bigskip\emph{\Maristenclosure}\\}
+    \end{addmargin}
+}

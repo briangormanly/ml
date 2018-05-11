@@ -1,0 +1,36 @@
+% Most idea comes from this SE answer
+% https://tex.stackexchange.com/a/59933/81126
+%
+% Significantly changed by Pablo Rivas in 2018
+% > If you like this, buy me a Dr. Pepper or Cofe (black, medium or dark roast)
+%
+% This is to provide a LaTeX-based template for a letter that follows Marist's
+% official publishing guidlines.
+%
+% Letter.tex
+% This file is the one that you will edit more often. This is where you will
+% specify your destinatary and the main body of your letter. If you have not
+% done so, you should have your information filled-in in MaristLetterDefs.tex
+% in the first few lines.
+
+
+\documentclass{article}
+
+% Destinatary info goes here
+\providecommand\Maristtoname{Dr. Someone}
+\providecommand\Maristtoaddress{Department of Something}
+
+% Date (defaults to today)
+\providecommand\Maristdate{\today}
+% Subject line, if any
+\providecommand\Maristsubject{\textbf{RE: Subject}}
+% Opening and closing, (I was taught to use commas but you can remove them here)
+\providecommand\Maristopening{Dear \Maristtoname,}
+\providecommand\Maristclosing{Sincerely,}
+\providecommand\Maristenclosure{Enclosure: a picture of a cute baby red fox}
+
+\input{MaristLetterDefs}
+
+\begin{document}
+Write here.
+\end{document}

@@ -1,0 +1,64 @@
+% Most idea comes from this SE answer
+% https://tex.stackexchange.com/a/59933/81126
+% Also inspired by Dr. Joe Kirtland's LaTeX recommendation
+%
+% Significantly changed by Pablo Rivas in 2018
+% > If you like this, buy me a Dr. Pepper or Cofe (black, medium or dark roast)
+%
+% This is to provide a LaTeX-based template for a letter that follows Marist's
+% official publishing guidlines.
+%
+% Letter.tex
+% This file is the one that you will edit more often. This is where you will
+% specify your destinatary and the main body of your letter. If you have not
+% done so, you should have your information filled-in in MaristLetterDefs.tex
+% in the first few lines.
+
+
+\documentclass{article}
+
+\usepackage{lipsum}
+
+% Destinatary info goes here
+\providecommand\Maristtoname{Hiring Committee}
+\providecommand\Maristtoaddress{Division of Artificial Intelligence\\
+                                Facebook Inc. \\
+                                New York, NY \ \ 17901\\
+                                USA}
+
+% Date (defaults to today)
+\providecommand\Maristdate{\today}
+% Subject line, if any
+\providecommand\Maristsubject{\textbf{RE: Recommendation letter for Mary Marist}}
+% Opening and closing, (I was taught to use commas but you can remove them here)
+\providecommand\Maristopening{Dear \Maristtoname,}
+\providecommand\Maristclosing{Sincerely,}
+
+\input{MaristLetterDefs}
+
+\begin{document}
+It is a privilege for me to write this recommendation in favor of Miss Mary
+Marist who is a student of mine at the Computer Science Department. I have been
+fortunate of having her as a student already. During the time she was in my
+class she demonstrated interest and participated frequently, always 
+engaged and fully present.
+
+I have known her for almost three years and I can testify about her devotion to
+computer science and her leadership skills. The programming assignments she has
+turned in have high quality and many times they surpass my expectations. She
+has been dedicated to my class and has asked the right questions.
+
+My desire is for you to consider her application as a software engineer for the
+following reasons:
+\begin{itemize}
+  \item she is very smart
+  \item she is cool
+  \item bullet points are cool
+\end{itemize}
+
+Please let me know if you wish to receive more information about her, or
+samples of her best programming projects from my class of Software Development.
+Feel free to contact me for any questions you may have about her.
+
+Thank you for your time.
+\end{document}
