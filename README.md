@@ -10,7 +10,7 @@ for such type of official communication. It uses the
 
 This was developed on MacOS and tested on a couple Linux distributions. I have 
 no intentions of testing this on Windows for personal reasons :expressionless:. 
-If you do test it and it works, let me know.:smiley:
+If you do test it and it works, let me know :smiley:.
 
 
 ## Features in v0.1
@@ -48,8 +48,9 @@ If you do test it and it works, let me know.:smiley:
   feedback, I can include such instructions here for other people.
 
 ## Acknowledgements
-Most the code comes directly from [this Tex Stack Excange answer](https://tex.stackexchange.com/a/59933/81126). i
-I did several modifications to it, but the general idea, is laregely not my
+Most the code comes directly from [Ali Mehrizi](https://tex.stackexchange.com/users/9626/ali-mehrizi) 
+who posted [this Tex Stack Excange question and answer](https://tex.stackexchange.com/a/59933/81126).
+Although I modified it substantially, the general idea is laregely not my
 own.
 
 Professor. Joe Kirtland also sent me a copy of his own LaTeX letterhead and I
