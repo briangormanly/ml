@@ -2,7 +2,6 @@ Marist's Letter LaTeX Template
 =====
 [![Latest Github release](https://img.shields.io/badge/version-0.1-blue.svg)](https://img.shields.io/badge/version-0.1-blue.svg)
 [![Build status of the master branch](https://img.shields.io/badge/build%20status-pass-green.svg)](https://img.shields.io/badge/build%20status-pass-green.svg)
-[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 This is an attempt at having a LaTeX template for a letter using what Marist 
 College considers our [master guidelines](http://www.marist.edu/publicaffairs/imc/pdfs/styleguide.pdf) 
@@ -61,3 +60,9 @@ own.
 Professor [Joe Kirtland](http://foxweb.marist.edu/users/joe.kirtland/) also 
 sent me a copy of his own LaTeX letterhead and I
 used that for inspiration. Thanks Joe! I owe you a :coffee:.
+
+
+
+License:
+
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
