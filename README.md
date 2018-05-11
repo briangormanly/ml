@@ -2,6 +2,7 @@ Marist's Letter LaTeX Template
 =====
 [![Latest Github release](https://img.shields.io/badge/version-0.1-blue.svg)](https://img.shields.io/badge/version-0.1-blue.svg)
 [![Build status of the master branch](https://img.shields.io/badge/build%20status-pass-green.svg)](https://img.shields.io/badge/build%20status-pass-green.svg)
+[![License: CC BY-SA 4.0](https://licensebuttons.net/l/by-sa/4.0/80x15.png)](https://creativecommons.org/licenses/by-sa/4.0/)
 
 This is an attempt at having a LaTeX template for a letter using what Marist 
 College considers our [master guidelines](http://www.marist.edu/publicaffairs/imc/pdfs/styleguide.pdf) 
@@ -35,6 +36,10 @@ If you do test it and it works, let me know :smiley:.
   your letter is, or update the path to it if you move it.
 
 ## Usage
+* If you know about GitHub :octocat: just clone or download the repo and enjoy. If you
+  have no idea of what you are doing, try just [downloading this repository as
+  a .zip file](https://github.com/pablorp80/ml/archive/master.zip), uncompress
+  it and use the files inside as necessary.
 * Edit the file MaristLetterDefs.tex and fill in your personal faculty 
   information, follow the comments in the file.
 * Edit the file Letter.tex which will contain the recipient information and 
